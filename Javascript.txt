@@ -1,3 +1,4 @@
+----------------------------JAVASCRIPT-----------------------------------------------
 1. Callback
 hiểu nôm na là truyền hàm A này vào 1 hàm B khác , đến 1 lúc nào đó thì hàm A này sẽ được 
 hàm B gọi lại, thường được dùng để lắng nghe event và xử lí bất đồng bộ'
