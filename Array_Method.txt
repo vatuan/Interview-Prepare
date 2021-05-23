@@ -1,0 +1,16 @@
+- ARRAY Method - 
+
+1. khác nhau giữa map và forEach
+  Giống nhau : sẽ gọi hàm callBack trên mọi phần tử của mảng
+  Khác nhau : forEach() không trả về bất cứ thứ gì , còn map() sẽ trả ra 1 mảng mới có
+ 		cùng kích thước với mảng ban đầu
+2. khác nhau giữa find và filter
+   TL : find() sẽ return về một element ngay khi đúng điều kiện
+        filter() sẽ return về 1 array thỏa mãn điều kiện
+
+shift() : xóa phần tử ĐẦU TIÊN 	của mảng và trả về Phần tử đó , method làm thay đổi phần 
+         tử của mảng
+unShift() : THÊM 1 hoặc nhiều phần tử vào ĐẦU mảng, trả về độ dài mới của mảng
+push() : THÊM 1 hoặc nhiều phần tử vào CUỐI mảng, trả về độ dài mới của mảng 
+pop() : xóa phần từ CUỐI CÙNG của mảng và trả về phần tử đó, method làm thay đổi phần tử 
+	của mảng

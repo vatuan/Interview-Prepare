@@ -1,0 +1,34 @@
+-----------------------REDUX-----------------------
+-Redux là 1 thư việc Js giúp quản lí state
+-Data follow chỉ 1 chiều thôi
+
+- Redux gồm 3 thành phần chính :  
+  1-View : là phần UI của mình, có thể là ReactJs, Vue, Angular, ... là cái gì cũng được
+  2-Action: đơn giản là 1 js object, mô tả mình muốn làm cái gì với store    
+  3-Store:thay đổi, cập nhật bên trong và trả về cho mình 1 state mới
+	  khi có state mới thì thông báo lên view cập nhật lại UI   
+   
+  luôn luôn là 1 chiều View -> Action -> Store ==> có state mới
+
+ - Follow : 
+   - B1 : Trên View xảy ra 1 sự kiện người dùng vd : click
+   - B2 : Action bắt được sự kiện trên component, thực hiện tạo 1 hành động có type và payload
+   - B3 : Action sẽ được gửi đến Reducer (trong store) thông qua hàm dispatch,
+	  Reducer sẽ dựa vào type của Action rồi cập nhật lại state mới 
+   - B4 : Sau khi state được thay đổi thì component chứa state cũng được rerender
+ 
+Hoặc có thể trình bày : 
+  - Store ban đầu có 1 initial state, initial state sẽ render lên View 	
+  - View làm 1 cái gì đó (vd : click) thì sẽ tạo 1 Action gửi lên Store, thông qua
+     Dispatcher xuống Reducer, tại Reducer dựa vào type của Action
+     biến đổi state cũ sang state mới
+  - Khi có state mới thì rerender lại component
+
+3 nguyên tắc của redux : 
+  - state của toàn bộ ứng dụng được lưu trong 1 store duy nhất
+  - muốn thay đổi state bắt buộc phải thông qua Action (View không thể tự làm được)
+  - để chỉ rõ state được thay đổi bơi 1 Action bắt buộc phải viết pure reducers	
+
+---------------------REDUX SAGA-------------------------------
+ Redux-Saga là một thư viện redux middleware,
+ giúp quản lý những side effect trong ứng dụng redux trở nên đơn giản hơn. 

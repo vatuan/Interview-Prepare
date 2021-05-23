@@ -1,0 +1,24 @@
+1. Callback
+hiểu nôm na là truyền hàm A này vào 1 hàm B khác , đến 1 lúc nào đó thì hàm A này sẽ được 
+hàm B gọi lại, thường được dùng để lắng nghe event và xử lí bất đồng bộ'
+2. Promise
+- là 1 cơ chế trong Js giúp xử lí các tác vụ bất đồng bộ mà không rơi vào callback hell
+- Ở 1 thời điểm nào đó thì promise sẽ có 3 trạng thái là 
+		- pending : trạng thái (tt) đang chờ kết thúc
+		- fulfilled: tráng thái xử lí thành công
+		- rejected : trạng thái xử lí thất bại
+- có thể nối nhiều promise bằng cách sử dụng .then() liên tiếp đằng sau
+và kết quả trong hàm then() thứ nhất sẽ là đầu vào cho hàm then() thứ 2
+
+* Promise.all()
+- trả về 1 promise mới 
+- promise chỉ được kết thúc khi các promise trong iterable kết thúc hoặc có 1 promise nào 
+đó xử lý thất bại
+- kết quả trả ra là 1 MẢNG chứa kết quả của tất cả các promise theo đúng thứ tự promise được
+truyền vào
+3. Async await
+- là 1 cơ chế giúp bạn thực hiện các thao tác bất đồng bộ một cách tuần tự hơn, async/await 
+vẫn sử dụng promise nhưng mã nguồn sẽ dễ đọc hơn :))
+- để sử dụng thì ta phải khai báo hàm với từ khóa async. khi đó bên trong hàm ta mới có 
+thể dùng await
+- kết quả trả về của async func luôn là 1 promise

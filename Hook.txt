@@ -1,0 +1,41 @@
+* useLayoutEffect() : sẽ chạy trước khi DOM được update
+  Trình tự sẽ là 
+-Bạn sẽ gây ra 1 event (thay đổi state/props, re-render từ component cha,...  (1)
+-Render component.                                                (2)
+-Chạy useLayoutEffect, và react sẽ đợi đến khi nào nó hoàn thành. (3)
+-Màn hình UI được cập nhật.(DOM được update)                      (4)
+ 
+* useEffect() : sẽ chạy sau khi DOM được update
+  Trình tự : giống useLayoutEffect() nhưng thay đổi vị trí (3) và (4)
+
+*useState() : là một hook cho phép ta thêm React state vào function components
+- tham số duy nhất được truyền vào hook useState() là state ban đầu
+- useState trả về cặp giá trị dưới dạng mảng lần lượt là state hiện tại và 1 hàm
+  để update nó 
+
+*useContext() : Context cung cấp phương pháp truyền data 
+xuyên suốt component tree mà không cần phải truyền props một cách thủ công qua từng level.
+
+*useReducer() : quản lí state của React bên cạnh useState(), nó có thể kết hợp với context 
+để quản lí state thay vì dùng redux
+ - useReducer nhận vào reducer(func) và initialState khởi tạo ban đầu,
+ trả về state hiện tại và dispatch function dùng để trigger 1 action
+
+*useCallback() : là 1 react hook giúp mình tạo ra memoized callback 
+và chỉ tạo ra callback mới khi dependencies thay đổi
+- nhận vào 2 tham số: 1 là function , 2 là dependencies
+- chỉ tạo ra func mới khi dependencies thay đổi
+- nếu là empty dependencies thì không bao giờ tạo ra func mới
+
+*useMemo(): là 1 react hooks giúp mình tạo ra 1 memoized value và chỉ tính toán ra value
+mới khi dependencies thay đổi 
+- nhận vào 2 tham số : 1 là func, 2 là dependencies 
+- retuen memoized value 
+- chỉ tính toán value mới khi dependencies thay đổi 
+- nếu dùng empty dependencies thì không bao giờ tính toán lại value mới
+
+==> dùng để hạn chế những lần re-render dư thừa (micro improvements)
+- nếu comp của bạn render về đồ thị, biểu đồ,animations phức tạp thì hãy nên dùng
+useCallback và useMemo()
+- nó chỉ là micro improvements, không cần thiết lắm, chỉ cần tổ chức tốt comp, theo
+đúng concept thì comp của bạn đã chạy nhanh rồi

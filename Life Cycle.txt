@@ -1,0 +1,32 @@
+------------------------ VÒNG ĐỜI CỦA COMPONENT---------------------------------
+
+Vòng đời của component chia thành 4 giai đoạn 
+ - 1, Initialzation
+ - 2, Mounting 
+ - 3, Updating
+ - 4, UnMounting
+
+Những phương thức được gọi trong từng giai đoạn 
+
+1.Initialzation
+  - contructor
+
+2.Mounting
+  3 phương thức lần lượt được gọi là 
+    	- getDerivedStateFromProps() -> phương thức này ít sử dụng
+	- render 
+	- componentDidMount -> lúc này dom đã được Mount, có thể call api trong method này
+
+3. Updating 
+  5 phương thức lần lượt được gọi là: 
+    - getDerivedStateFromProps -> ít dùng
+    - shouldComponentUpdate -> check xem comp có được render lại không, param : nextProps/State
+    - render
+    - getSnapshotBeforeUpdate -> chạy ngay sau render, trước khi DOM được update
+			sẽ trả về giá trị mà giá trị này được sdung trong componentDidUpdate
+    - componentDidUpdate -> lúc này DOM đã được update và có thể thao tác với DOM trong method này
+
+4. UnMounting
+   - đây là giai đoạn cuối cùng trong component,xảy ra khi comp bị loại khỏi DOM 
+   1 phương thức duy nhất được gọi là componentWillUnmount(). 
+    Trong hàm này người ta thường sẽ dùng để hủy các timer, cancel các request...
