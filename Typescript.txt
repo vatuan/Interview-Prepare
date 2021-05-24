@@ -1,0 +1,38 @@
+-------------------- TYPESCRIPT---------------------------------
+
+1. abstract class: 
+- không thể tạo thể hiện với 1 abstract class mà phải tạo 1 class khác extend lại 
+abstract class (không thể tạo đối tượng bằng từ khóa new với abstract class)
+- khi 1 method được định nghĩa là 1 abstract thì nó không được triển khai, mà nó phải 
+triển khai ở lớp con
+- method của lớp abstract có tham số truyền vào, nhưng khi nó được triển khai ở lớp con kế 
+thừa thì không nhất thiết phải nhận vào tham số truyền vào
+
+2.Interface
+- Một interface được định nghĩa chứ không được triển khai
+- nếu 1 class implements interface thì phải overide lại method của interface
+Ví dụ : 
+```
+interface People {
+    name: string;
+    eat(): void;
+    sleep(): void;
+}
+
+class Superman implements People {   ==> dùng từ khóa implements 
+    name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
+    eat(): void {
+        console.log('eat');
+    }
+    sleep(): void {
+        console.log('sleep');
+    }
+}
+let tuan: People = new Superman('tuan');
+tuan.eat();
+tuan.sleep();
+
+```

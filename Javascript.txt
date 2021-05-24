@@ -23,3 +23,38 @@ vẫn sử dụng promise nhưng mã nguồn sẽ dễ đọc hơn :))
 - để sử dụng thì ta phải khai báo hàm với từ khóa async. khi đó bên trong hàm ta mới có 
 thể dùng await
 - kết quả trả về của async func luôn là 1 promise
+
+-------------NHỮNG CÂU HỎI----------------------
+1. Sự khác nhau giữa var, let, const ? 
+ * KHÁC NHAU VỀ BLOCK
+ - nếu được khai báo trong func thì scope của nó là function/locally scoped,
+nếu ngoài func thì scope của nó là globally scoped
+ - let và const thì scope của nó là block scope, chứ không phải là globally hay locally scoped.
+
+ * KHÁC NHAU VỀ VIỆC DEFINE LẠI 
+  - var có thể được định nghĩa lại 1 cách dễ dàng, có thể dùng từ khóa 'var' hoặc không 
+		vd : var foo = 100;
+	             foo = 30; var foo = 102    => log ra sẽ là 102
+  - let cũng có thể được định nghĩa(đn) lại , nhưng sẽ chặt chẽ hơn var ,khi đn lại thì không 
+thể dùng từ khóa 'let' được
+	      vd : let bar = 100, bar = 1000  ==> log sẽ ra 1000
+  - const thì không thể được đn lại 
+	
+ * HOISTING
+  - var được khởi tạo với giá trị là undefined 
+  - let và const không có bất kì giá trị khởi tạo nào, nếu sử dụng biến let và const trước
+khi khai báo thì sẽ gặp lỗi Reference Error
+
+2. từ khóa this
+- từ khóa this đề cập đến phạm vi hiện tại của nó (nơi nó được gọi).
+
+3. == và ===
+- '==' là so sánh xem có cùng giá trị hay không 
+- '===' so sánh cả về giá trị và cả kiểu
+
+4. trong JS có bao nhiều kiểu DL cơ bản 
+- 6 kiểu: String, Boolean, Number , Null, Undefined, Object
+
+5. number++ và ++number khác nhau như thế nào ? 
+  - '++' được thêm làm hậu tố: đầu tiên nó trả về giá trị,sau đó tăng lên 1.
+  - '++' được thêm làm tiền tố: đầu tiên tăng lên 1 đơn vị, sau đó trả về giá trị.
