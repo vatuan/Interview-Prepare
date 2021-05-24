@@ -6,7 +6,7 @@ flow:
   - dev xong thì commit code lên nhánh của mình dev
   - cuối ngày làm xong thì rebase vào develop(develop là nhánh chính để phát triển)
   - Nếu có conflict thì sửa
-  - Sửa xong thì `git push -f` lên và tạo merge request và develop
+  - Sửa xong thì `git push` lên và tạo merge request và develop
   - Người review code thấy ok thì merge vào develop
 
 - nếu đang đứng ở nhanh của mình dev (tuanva) thì chạy lệnh : git rebase develop tuanva
