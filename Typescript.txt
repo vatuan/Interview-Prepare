@@ -1,5 +1,8 @@
 -------------------- TYPESCRIPT---------------------------------
-
+- TS là một dự án mã nguồn mở được phát triển bới Microsoft, nó có thể được coi là phiên bản
+nâng cao của JS
+- Basic types: bao gồm 7 loại : boolean, number, string, array, enum, any, void
+- Ts giúp ta biết được kiểu trả về của biến, func vd : let a:number = 100
 1. abstract class: 
 - không thể tạo thể hiện với 1 abstract class mà phải tạo 1 class khác extend lại 
 abstract class (không thể tạo đối tượng bằng từ khóa new với abstract class)
