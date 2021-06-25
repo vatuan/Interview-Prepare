@@ -1,14 +1,9 @@
-- hook (hỏi những hook hay dùng, dùng như nào),
-- follow redux, redux saga
-- component lifecycle
-- dùng TS bao giờ chưa, nếu dùng rồi thì hỏi abstract với interface
-- html, css 
-- git rebase
+
 - token, refresh token (nếu token hết hạn thì thì xử lí bằng cách tạo common services)
-flex và grid khác nhau như thế nào : 
+-flex và grid khác nhau như thế nào : 
 flex thì chỉ style trên 1 hàng, 1 cột
 còn grid để style trên nhiều hàng, nhiều cột
-
+-------------------------------------***--------------------------------------------------
 giới thiệu : 
   - Lời đầu tiên em xin cảm ơn các anh chị cùng quý công ty đã trao cho em cơ hội được tham gia
  buổi phỏng vấn ngày hôm nay, sau đây em xin giới thiệu đôi nét về bản thân  

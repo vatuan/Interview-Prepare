@@ -1,0 +1,12 @@
+----------------------------- TOKEN VÀ REFRESH TOKEN-----------------------------------
+- token : là công cụ thông tin cần thiết để truy cập vào API,
+	thường lưu token ở cookies hoặc localStorage
+- refresh token : nhiệm vụ là lấy về 1 token mới, nếu token được cấp phát cho user hết hạn
+
+- khi token bị expired thì ta nên tạo 1 common services dùng chung
+- trong TH token hết hạn
+	Nếu có nhiều request thì chỉ cho 1 request đầu tiên đi refresh token mà thôi, nhưng 
+request sau sẽ đứng đợi request đầu tiên đi refresh token , có token mới thì sẽ chạy tiếp
+- tạo ra 1 api common services làm nhiệm vụ refresh token , 
+- trong hàm call api, check được biến token hết hạn, nếu token hết hạn gọi đến common servies
+mình tạo ra
