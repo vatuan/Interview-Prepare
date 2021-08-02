@@ -32,3 +32,27 @@ Hoặc có thể trình bày :
 ---------------------REDUX SAGA-------------------------------
  Redux-Saga là một thư viện redux middleware,
  giúp quản lý những side effect trong ứng dụng redux trở nên đơn giản hơn. 
+Một số Kn cần nắm : Effect, Task, Blocking/Non Blocking
++ Effect là 1 js obj chứa thông tin để saga middle biết phải làm việc gì
++ Task được mô tả là 1 process chạy bên dưới background, có thể tạo các task chạy đồng thời song2 với nhau
++ Blocking/Non-blocking : blocking là phải đợi thực thi lệnh 1 xong mới thực thi lệnh 2
+
+setup saga : lưu ý phải khởi tạo store thì mới applyMiddleware , run saga phải sau phase applySagaMiddleware
+note : trong root saga thì có nhiều saga con , mỗi saga đảm nhiệm 1 nhiệm vụ
+
+- saga phải là 1 func và return ra 1 generator obj, khi saga chạy thì middle sẽ đi qua generator obj
+và thực thi tất cả những yeild effect
+- saga có rất nhiều các effect (có 1 list các effect creators)
+
+---------------------- REDUX THUNK--------------------------
+Redux- Thunk là 1 redux middleware cho phép viết các action trả về 1 func thay vì 1 PJO (plain js obj) bằng 
+cách trì hoãn việc được action đến reducer
+- redux thunk được sử dụng để xử lý các logic bất đồng bộ phức tạp cần truy cập đến store hoặc đơn 
+giản là việc lấy dữ liệu từ ajax request
+
+ Redux Thunk cho phép trả về các Action là một function thay vì chỉ là một PJO,
+ nó đóng vai trò là một Middleware được đặt trước thời điểm reducer nhận request
+ để nhận biết các action có trả về một PJO hay không,
+ nếu đó là một PJO, Thunk sẽ chuyển action đó đến Reducer như thường lệ, 
+nếu action trả về là một function, Redux Thunk sẽ "chặn" action đó lại 
+và đợi cho đến khi một lệnh asynchronous nào đó trong function hoàn tất và trả về kết qu

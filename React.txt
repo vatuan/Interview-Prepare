@@ -22,3 +22,15 @@ connect cho 1 store redux. Các container nhận các cập nhật state Redux v
 - props không nên bị thay đổi dữ liệu (có thể thay đổi được bằng cách sử dụng setProps hay replaceProps
 nhưng không được React khuyến khích
 )
+
+5. HOC là gì 
+- HOC - Higher-order component là 1 kĩ thuật nâng cao trong ReactJs được sử dụng trong việc sử dụng
+lại các component
+- HOC là 1 hàm và nó nhận đối số là 1 component và trả về 1 component mới
+- HOC được sử dụng trong Redux hay React-DnD
+
+6. Custom hook ? 
+- Custom hook là những hooks mà mình tự định nghĩa với mục đích thực hiện chức năng nào đó,
+- Khi đặt tên 1 custom hooks thì phải có từ khóa use ở đầu 
+- Custom hook thường được dùng trong TH muốn tách biệt các phần xử lí logic riêng ra khỏi UI , 
+hay chia sẻ logic giữa các component
