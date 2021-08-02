@@ -1,0 +1,24 @@
+1.Component trong react là gì?  có những loại component nào 
+- Trong React, các comp hoạt động giống như các hàm trả về các thành phần HTML 
+- Các component là độc lập và có thể sử dụng lại
+- Có 2 loại component là : 
+	- function component
+	- class component
+2. phân biệt container và component
+- Component là một phần của API React. Component là 1 class hoặc 1 function mô tả 1 phần UI React
+- Container có thể được hiểu như là 1 thuật ngữ không chính thức cho React component, có khả năng
+connect cho 1 store redux. Các container nhận các cập nhật state Redux và dispatch action.
+   - container thường không hiển thị các phần tử DOM, nó ủy thác cho React component làm việc này
+
+3. State là gì? 
+- state là 1 obj chứa dữ liệu hoặc thông tin về components
+- state có thể được thay đổi bất cứ lúc nào
+- state chỉ tồn tại trong component chứa nó
+- mỗi khi state thay đổi thì component sẽ bị re render lại
+
+4. Props là gì ? 
+- props thực chất là viết tắt của properties
+- props là cách để có thể truyền dữ liệu từ component cha xuống comp con và ngược lại 
+- props không nên bị thay đổi dữ liệu (có thể thay đổi được bằng cách sử dụng setProps hay replaceProps
+nhưng không được React khuyến khích
+)

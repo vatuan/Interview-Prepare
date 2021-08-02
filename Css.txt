@@ -1,0 +1,16 @@
+---- Css------
+1. Flex box
+- có 2 thành phần chính là flex container và flex items
+- ngoài ra cần quan tâm đến 1 số thuộc tính như : main start, main end, cross start, cross end
+     + main start/main end là điểm bắt đầu/kết thúc của container theo main axis (trục chính)
+     + cross start/cross end là điểm bắt đầu/ kết thúc của container theo cross axis (trục phụ)
+	==> main axis: là trục chính, là hướng của các item hiển thị, mặc định sẽ chạy từ trái qua phải
+	==> cross axis : vuông góc với main axis, chạy từ trên xuống dưới
+- Các thuộc tính của flex container có thể sử dụng 
+    + display : thuộc tính này là bắt buộc nếu muốn sử dụng flex box
+    + flex-direction : dùng để chỉ định hướng hiển thị của các item, làm thay đổi hướng của trục chính
+    + flex-wrap : kiểm soát các item nằm gọn trong container
+    + flex-flow : cách viết gọn của flex-direction (là gtri thứ 1) và flex-wrap (là gtri thứ 2)
+    + justified-content: căn chỉnh vị trí của các items so với trục chính   
+    + align-items: xác định cách mà các flex item được đặt trong container theo trục phụ (cross axis)
+    + align-content: căn chỉnh vị trí của các items so với trục phụ (ngược với justified-content)
