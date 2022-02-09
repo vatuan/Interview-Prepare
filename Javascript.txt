@@ -1,4 +1,4 @@
-----------------------------JAVASCRIPT-----------------------------------------------
+﻿----------------------------JAVASCRIPT-----------------------------------------------
 1. Callback
 hiểu nôm na là truyền hàm A này vào 1 hàm B khác , đến 1 lúc nào đó thì hàm A này sẽ được 
 hàm B gọi lại, thường được dùng để lắng nghe event và xử lí bất đồng bộ'
@@ -58,3 +58,7 @@ khi khai báo thì sẽ gặp lỗi Reference Error
 5. number++ và ++number khác nhau như thế nào ? 
   - '++' được thêm làm hậu tố: đầu tiên nó trả về giá trị,sau đó tăng lên 1.
   - '++' được thêm làm tiền tố: đầu tiên tăng lên 1 đơn vị, sau đó trả về giá trị.
+
+6. Closure là gì ?
+- Closure là tính bao đóng, tính khép kín của hàm, thể hiện bằng tính chất: 1 hàm có thể ghi nhớ nơi nó được tạo
+và truy cập được biến ở ngoài phạm vi của nó

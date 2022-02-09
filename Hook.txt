@@ -1,4 +1,4 @@
-
+﻿
 1. Hook là gì ? 
 Hook là một hàm đặc biệt cho phép mình sử dụng các tính năng của React (mà không cần phải
 tạo class)
@@ -26,7 +26,7 @@ trong React component
 	- run useEffect() (không run phần clean up)
 - Trong lần render tiếp theo (UPDATING)
 	- rendering 
-	- run `useEffect clean up`
+	- run `useEffect clean up` (run phần clean up)
 	- run `useEffect`
 - Khi UNMOUNT
 	- run `useEffect() clean up` , đảm bảo tất cả mọi thứ được clean trước khi comp unmount
