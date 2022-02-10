@@ -62,3 +62,35 @@ khi khai báo thì sẽ gặp lỗi Reference Error
 6. Closure là gì ?
 - Closure là tính bao đóng, tính khép kín của hàm, thể hiện bằng tính chất: 1 hàm có thể ghi nhớ nơi nó được tạo
 và truy cập được biến ở ngoài phạm vi của nó
+7. Scope trong Js 
+Các loại Scope (phạm vi) : 
+	- Global : phạm vi toàn cầu
+	- Code block : phạm vi khối mã với let, const
+	- Local scope: phạm vi được tạo ra trong phần thân của hàm, khi hàm đó được gọi
+
+8. Hoisting là gì
+- Trong Js thì tất cả cú pháp khai báo biến, khai báo hàm thì đều được hoisted hết
+- Hoisting là đề cập đến việc khai báo biến, khai báo hàm, thì biến , hàm được khai báo sẽ được đưa lên đầu phạm vi của chúng
++ Hoisting với biến var và func declaration: với biến var khi đc hoisted sẽ được khởi tạo giá trị undefined, với func
+declaration thì phần khai báo sẽ được đưa lên => vì vậy có thể gọi hàm trước khi hàm đó được khai báo
+
+==============
+sum(6,9) ---> gọi hàm trước khi khai báo
+// func declaration
+function sum(a,b){
+    return a + b
+}
+========================
++ Hoising với biến let, const
+  Với biến let và const đều được hoisted, nhưng khi hoisted thì không được tạo giá trị mà nó được đưa vào 
+"Temporal Dead Zone là vùng tạm thời không truy cập được" ==> sẽ báo lỗi cannot access "biến" before initiazation
+
+9. strict mode
+- Là chế độ nghiêm ngặt, là chế độ giúp code js an toàn hơn, khi bật chế độ này lên trong một số 
+trường hợp có thể giúp tránh khỏi những lỗi do mình sơ ý để nó xảy ra
+- Là 1 tính năng được ra mắt trong phiên bản ES6 
+- Sử dụng:
+ đặt từ khóa "use strict" ở : 
+	+ đầu file js
+	+ đầu phạm vi của hàm
+	+ ngay đăng sau thẻ mở <script>
