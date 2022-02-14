@@ -34,3 +34,20 @@ lại các component
 - Khi đặt tên 1 custom hooks thì phải có từ khóa use ở đầu 
 - Custom hook thường được dùng trong TH muốn tách biệt các phần xử lí logic riêng ra khỏi UI , 
 hay chia sẻ logic giữa các component
+
+e: React.UIEvent<HTMLDivElement, UIEvent>
+
+7. Dùng state thế nào cho hiệu quả?
+- dùng cho chính component đó thì viết theo kiểu component state
+- dùng cho nhiều component thì dùng global state ( redux, context)
+
+8. Chia component thế nào cho hiệu quả ? 
+- có 2 loại component là : 
+   + Container (hay còn gọi là smart component)
+	- là component chỉ quản lí, cung cấp dữ liệu (lấy dữ liệu từ server, chuẩn bị dữ liệu tĩnh) 
+        - không quan tâm đến render UI như thế nào, chỉ quan tâm đến render cái gì mà thôi,
+   + Component (hay còn gọi là dumb component)
+	- cho cái gì render cái đó
+        - không biết dữ liệu đến từ đâu
+	- thường chỉ có props, không có state
+	- tái sử dụng với các props khác nhau 

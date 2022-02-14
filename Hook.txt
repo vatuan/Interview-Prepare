@@ -44,6 +44,10 @@ trong React component
 
 *useContext() : Context cung cấp phương pháp truyền data 
 xuyên suốt component tree mà không cần phải truyền props một cách thủ công qua từng level.
+các bước tạo ra context
+B1. Tạo Context
+B2. Tạo Provider (cung cấp dữ liệu)
+B3. Tạo Consummer (nhận dữ liệu)
 
 -----------------------------***----------------------------------
 
