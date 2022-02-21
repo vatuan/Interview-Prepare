@@ -50,7 +50,8 @@ B2. Tạo Provider (cung cấp dữ liệu)
 B3. Tạo Consummer (nhận dữ liệu)
 
 -----------------------------***----------------------------------
-
+*memo 
+ - là 1 HOC , giúp ghi nhớ props của component -> quyết định việc có render lại component hay không
 *useReducer() : quản lí state của React bên cạnh useState(), nó có thể kết hợp với context 
 để quản lí state thay vì dùng redux
  - useReducer nhận vào reducer(func) và initialState khởi tạo ban đầu,

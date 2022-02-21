@@ -29,7 +29,7 @@ thể dùng await
  * KHÁC NHAU VỀ BLOCK
  - nếu được khai báo trong func thì scope của nó là function/locally scoped,
 nếu ngoài func thì scope của nó là globally scoped
- - let và const thì scope của nó là block scope, chứ không phải là globally hay locally scoped.
+ - let và const thì scope của nó là block scope (code block- phạm vi khối mã), chứ không phải là globally hay locally scoped.
 
  * KHÁC NHAU VỀ VIỆC DEFINE LẠI 
   - var có thể được định nghĩa lại 1 cách dễ dàng, có thể dùng từ khóa 'var' hoặc không 
@@ -62,6 +62,7 @@ khi khai báo thì sẽ gặp lỗi Reference Error
 6. Closure là gì ?
 - Closure là tính bao đóng, tính khép kín của hàm, thể hiện bằng tính chất: 1 hàm có thể ghi nhớ nơi nó được tạo
 và truy cập được biến ở ngoài phạm vi của nó
+
 7. Scope trong Js 
 Các loại Scope (phạm vi) : 
 	- Global : phạm vi toàn cầu
@@ -94,3 +95,23 @@ trường hợp có thể giúp tránh khỏi những lỗi do mình sơ ý đ�
 	+ đầu file js
 	+ đầu phạm vi của hàm
 	+ ngay đăng sau thẻ mở <script>
+
+10. Functional Programing
+- là 1 tiền trình tạo nên 1 phần mềm bằng cách kết hợp:
+   + pure function
+   + tránh chia sẻ các biến
+   + tránh thay đổi các biến
+   + tránh các side effect (tránh các hiệu ứng phụ)
+Các khái niệm cần biết với Function Programing
+ *Pure func là gì ? 
+	- là 1 hàm với input giống nhau luôn cho ra 1 output giống nhau (kết quả output chỉ phụ thuộc vào input)
+        - không có side effect 
+ * Function Composition ?
+	- là tiến trình kết hợp 2 hay nhiều hàm để tạo nên hàm mới hoặc thực hiện 1 nhiệm vụ gì đó
+ * Shared State(Biến chia sẻ) ?
+	- các hàm không nên chia sẻ nhau giữa các biến, dữ liệu
+ * Side effect là gì ? 
+	- là việc thay đổi biến bên ngoài phạm vi và thay đổi thuộc tính của đối tượng ==> có nghĩa là trong 1 hàm thì 
+không nên thay đổi cái biến bên ngoài phạm vi (không làm việc với biến bên ngoài pvi)
+	- là việc console.log
+	- là việc ghi lên file
