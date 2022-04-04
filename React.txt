@@ -51,3 +51,21 @@ e: React.UIEvent<HTMLDivElement, UIEvent>
         - không biết dữ liệu đến từ đâu
 	- thường chỉ có props, không có state
 	- tái sử dụng với các props khác nhau 
+
+9. Virtual DOM:
+Virtual DOM (VDOM hay DOM ảo) , 
+là cách thể hiện DOM thật của một trang web dưới dạng các Javascript object.
+Khi thay đổi state của app thì VDOM sẽ được cập nhật lại và so sánh với VDOM cũ
+(VDOM cũ được đồng bộ hóa với DOM thật trước đó)
+bằng thuật toán gọi là diffing hay change detection để tìm ra những node cần thay đổi.
+Cuối cùng nó sẽ cập nhật những node đó trên DOM thật.
+
+10. Khi nào nên dùng redux
+- state có share giữa nhiều component hay không? 
+ + không : dùng useState, useReducer (phức tạp thì dùng useReducer, đơn giản thì dùng useState)
+ + có : nếu có thì nó có thay đổi thường xuyên không ? 
+	 ++ nếu không thay đổi thường xuyên dùng useContext (vì nếu giá trị của context thay đổi thì sẽ trigger
+             render lại những thằng con bên dưới) 
+
+10. có nên set state trong componentDidUpdate không ?
+không nên set, vì có thể dẫn đến trường hợp component bị render liên tục

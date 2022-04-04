@@ -1,5 +1,4 @@
-﻿
-1. Hook là gì ? 
+﻿1. Hook là gì ? 
 Hook là một hàm đặc biệt cho phép mình sử dụng các tính năng của React (mà không cần phải
 tạo class)
 
@@ -12,8 +11,8 @@ tạo class)
 
 ----------------------***--------------------------
 
-- useEffect(): cho phép thực hiện side effect bên trong các func comp
-- side effect : là việc fetching data, thiết lập các subscription và việc thay đổi DOM
+* useEffect(): cho phép thực hiện side effect bên trong các func comp
+	Note: side effect : là việc fetching data, thiết lập các subscription và việc thay đổi DOM
 trong React component
 
 - gồm 2 phần : side effect và clean up (optional)
@@ -30,6 +29,7 @@ trong React component
 	- run `useEffect`
 - Khi UNMOUNT
 	- run `useEffect() clean up` , đảm bảo tất cả mọi thứ được clean trước khi comp unmount
+
 * useEffect() : sẽ chạy sau khi DOM được update
   Trình tự : giống useLayoutEffect() nhưng thay đổi vị trí (3) và (4)
 

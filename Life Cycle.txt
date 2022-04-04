@@ -9,22 +9,25 @@ Vòng đời của component chia thành 4 giai đoạn
 Những phương thức được gọi trong từng giai đoạn 
 
 1.Initialzation
-  - contructor
+  * contructor : là phương thức được gọi đầu tiên, là nơi để khởi tạo các state và bind các phương thức
+nếu không tạo state và bind các phương thức thì method này không cần gọi.
 
 2.Mounting
   3 phương thức lần lượt được gọi là 
-    	- getDerivedStateFromProps() -> phương thức này ít sử dụng
-	- render 
-	- componentDidMount -> lúc này dom đã được Mount, có thể call api trong method này
+    	* getDerivedStateFromProps() -> gọi ngay trước khi render element vào DOM, được dùng để thiết 
+lập lại state dựa trên props ban đầu, hàm này nhận vào 2 đối số là state và props (phương thức này ít sử dụng)
+	* render : phương thức này là bắt buộc nó thực hiện việc render các element vào DOM
+	* componentDidMount -> lúc này dom đã được Mount, có thể call api, update state trong method này
 
 3. Updating 
   5 phương thức lần lượt được gọi là: 
-    - getDerivedStateFromProps -> ít dùng
-    - shouldComponentUpdate -> check xem comp có được render lại không, param : nextProps/State
-    - render
-    - getSnapshotBeforeUpdate -> chạy ngay sau render, trước khi DOM được update
-			sẽ trả về giá trị mà giá trị này được sdung trong componentDidUpdate
-    - componentDidUpdate -> lúc này DOM đã được update và có thể thao tác với DOM trong method này
+    * getDerivedStateFromProps -> ít dùng, là phương thức được gọi đầu tiên trong quá trình Update
+    * shouldComponentUpdate -> return ra boolean để xem comp có được render lại không,
+    * render 
+    * getSnapshotBeforeUpdate -> chạy ngay sau render, trước khi DOM được update
+phương thức này sẽ trả về giá trị mà giá trị này được dụng trong componentDidUpdate, nhận vào 2 tham số là prevState và prevProps
+(giá trị trước của state và giá trị trước của props)
+    * componentDidUpdate -> lúc này DOM đã được update và có thể thao tác với DOM trong method này
 
 4. UnMounting
    - đây là giai đoạn cuối cùng trong component,xảy ra khi comp bị loại khỏi DOM 

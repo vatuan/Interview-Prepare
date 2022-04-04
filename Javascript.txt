@@ -20,7 +20,7 @@ truyền vào
 3. Async await
 - là 1 cơ chế giúp bạn thực hiện các thao tác bất đồng bộ một cách tuần tự hơn, async/await 
 vẫn sử dụng promise nhưng mã nguồn sẽ dễ đọc hơn :))
-- để sử dụng thì ta phải khai báo hàm với từ khóa async. khi đó bên trong hàm ta mới có 
+- để sử dụng thì ta phải khai báo hàm với từ khóa async. khi đó bên trong hàm ta mới có
 thể dùng await
 - kết quả trả về của async func luôn là 1 promise
 
@@ -60,6 +60,10 @@ khi khai báo thì sẽ gặp lỗi Reference Error
   - '++' được thêm làm tiền tố: đầu tiên tăng lên 1 đơn vị, sau đó trả về giá trị.
 
 6. Closure là gì ?
+Closure là một hàm được tạo ra từ bên trong một hàm khác. 
+Nó có thể sử dụng các biến global variable, local variable của HÀM CHA.
+Việc viết hàm theo kiểu closure sẽ dễ quản lý và linh hoạt hơn, 
+
 - Closure là tính bao đóng, tính khép kín của hàm, thể hiện bằng tính chất: 1 hàm có thể ghi nhớ nơi nó được tạo
 và truy cập được biến ở ngoài phạm vi của nó
 
@@ -111,7 +115,51 @@ Các khái niệm cần biết với Function Programing
  * Shared State(Biến chia sẻ) ?
 	- các hàm không nên chia sẻ nhau giữa các biến, dữ liệu
  * Side effect là gì ? 
+ side-effect có thể hiệu là một khái niệm miêu tả các tính toán bên trong một hàm
+ ảnh hưởng đến các đối tượng bên ngoài không thông qua đối số.
 	- là việc thay đổi biến bên ngoài phạm vi và thay đổi thuộc tính của đối tượng ==> có nghĩa là trong 1 hàm thì 
 không nên thay đổi cái biến bên ngoài phạm vi (không làm việc với biến bên ngoài pvi)
 	- là việc console.log
 	- là việc ghi lên file
+
+11. OOP trong JS
+tham khảo : https://phambinh.net/bai-viet/lap-trinh-huong-doi-tuong-trong-javascript/
+ OOP có 4 tính chất : 
+	+ Tính bao đóng : Hỗ trợ kém (1 biến vẫn có thể truy cập ở bên ngoài phạm vi)
+	+ Tính kế thừa : Hỗ trợ tốt (từ phiên bản ES6 (EMAScript 2015) đã có từ khóa extends thể hiện việc kế thừa)
+	+ Tính trừu tượng : Hỗ trỡ kém
+	+ Tình đa hình: Hỗ trợ tốt
+
+12 . Các hàm làm việc với string trong Js
+ Tham khảo : https://phambinh.net/bai-viet/cac-ham-lam-viec-voi-string-trong-javascript/
++ includes() : được sử dụng để kiểm tra xem string con có nằm trong string mẹ hay không. 
+==> Phương thức trả về true nếu tìm thấy, ngược lại trả về false.
++ indexOf() được sử dụng khi bạn muốn lấy vị trí xuất hiện đầu tiên của string con trong string mẹ.
+==> nếu tìm thấy thì vị trí được tính từ 0, nếu không tìm thấy thì trả về -1;
++ slice() được sử dụng khi bạn muốn trích một string con trong string mẹ từ vị trí n tới vị trí m.
+ Tham số n, m cũng có thể là số âm, nếu là số âm vị trí sẽ được tính từ cuối string.
++ split() được sử dụng khi bạn muốn phân tách string mẹ thành một mảng các string con theo một dấu hiệu nhận biết nào đó.
++ substr() được sử dụng khi bạn muốn cắt một string con trong string mẹ từ vị trí n và kéo dài m phần tử.
+
+13 . Các cách coppy 1 Object
+- dùng spread operator
+- dùng Object.assign
+- dùng JSON.stringyfy
+
+14. khác nhau for, for..in, for..of, forEach
+ * for 
+Dùng for để loop qua từng phần tử. Cách này khá dài dòng nhưng ưu điểm của nó là có thể cùng: break, continue.
+ * forEach 
+Dùng forEach ngắn gọn nhưng không có break và continue
+ * for-in
+for … in, ngắn gọn nhưng phải chạy qua những phần tử không cần thiết như các prototype
+ * for-of
+Có cả ưu điểm của for và forEach, for … in
+
+dùng filter và some , 
+coreJS viteJS
+babel ==> build JSX
+
+15 Arrow function
+- Cú pháp gọn hơn, dễ hiểu hơn 🙂
+– Hạn chế ảnh hưởng this trong một scope.

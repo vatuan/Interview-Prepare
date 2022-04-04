@@ -12,3 +12,9 @@ flow:
 - nếu đang đứng ở nhanh của mình dev (tuanva) thì chạy lệnh : git rebase develop tuanva
 hoặc ngắn gọn hơn là git rebase develop (sẽ được hiểu là 'git checkout tuanva' trước khi 
 thực hiện 'git rebase develop' )
+
+2. Rebase khác gì với merge 
+
++ rebase là đổi parent của nhánh hiện tại, muốn đổi parent thì nó phải đi ngược lại từng commit để kiểm tra conflict
++ merge là trộn 2 nhánh lại 
++ rebase không lưu được lịch sử của commit, còn merge thì không lưu được

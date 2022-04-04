@@ -39,3 +39,5 @@ tuan.eat();
 tuan.sleep();
 
 ```
+
+truffle suite

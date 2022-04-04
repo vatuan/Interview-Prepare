@@ -28,3 +28,17 @@ như bao ứng viên khác mong muốn có 1 mức lương phù hợp  để tra
 cho bản thân cũng như phụ giúp kinh tế gia đình thì em mong muốn mức lương : từ 16-18tr NET
 cho vị trí này 
  
+async function() {
+try {
+await funcA()
+} catch() {}
+await funcB()
+}
+
+vai tro html css js trong 1 trang web
+HTML : giúp chia khung sườn, tạo nên bố cục của trang web
+CSS : dùng để thay đổi diện mạo của trang web
+
+- phân biệt CSR SSR 
+* pre-rendering : render sẵn các file HTML ở phía server.
+* CSR : 
