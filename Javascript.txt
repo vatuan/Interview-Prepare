@@ -156,9 +156,6 @@ for … in, ngắn gọn nhưng phải chạy qua những phần tử không c�
  * for-of
 Có cả ưu điểm của for và forEach, for … in
 
-dùng filter và some , 
-coreJS viteJS
-babel ==> build JSX
 
 15 Arrow function
 - Cú pháp gọn hơn, dễ hiểu hơn 🙂
