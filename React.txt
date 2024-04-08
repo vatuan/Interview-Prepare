@@ -62,10 +62,12 @@ Cuối cùng nó sẽ cập nhật những node đó trên DOM thật.
 
 10. Khi nào nên dùng redux
 - state có share giữa nhiều component hay không? 
- + không : dùng useState, useReducer (phức tạp thì dùng useReducer, đơn giản thì dùng useState)
- + có : nếu có thì nó có thay đổi thường xuyên không ? 
-	 ++ nếu không thay đổi thường xuyên dùng useContext (vì nếu giá trị của context thay đổi thì sẽ trigger
-             render lại những thằng con bên dưới) 
+ -> NO : dùng useState, useReducer (phức tạp thì dùng useReducer, đơn giản thì dùng useState)
+ -> YES : nếu có thì nó có thay đổi thường xuyên không ? 
+	 ++ nếu không thay đổi thường xuyên dùng useContext (vì nếu giá trị của context thay đổi thì sẽ trigger render lại những thằng con bên dưới)
+	 ++ nếu có thì có liên quan đến server state không (server state có nghĩa là bạn phải đi fetch API, API trả về thông tin và bạn phải lưu lại thông tin đó)
+    	++ Nếu có liên quan thì dùng Apollo , React Query (recommend from React site) hoặc swr (với NextJS)
+    	++ Nếu không liên quan đến server state thì dùng Redux
 
 10. có nên set state trong componentDidUpdate không ?
 không nên set, vì có thể dẫn đến trường hợp component bị render liên tục
