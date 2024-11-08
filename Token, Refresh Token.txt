@@ -10,3 +10,9 @@ request sau sẽ đứng đợi request đầu tiên đi refresh token , có tok
 - tạo ra 1 api common services làm nhiệm vụ refresh token , 
 - trong hàm call api, check được biến token hết hạn, nếu token hết hạn gọi đến common servies
 mình tạo ra
+
+
+const api = axios.create({
+  baseURL: 'http://localhost:5000',
+  withCredentials: true, // Send cookies with requests
+});

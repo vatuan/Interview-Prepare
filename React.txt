@@ -24,10 +24,116 @@ nhưng không được React khuyến khích
 
 
 5. HOC là gì 
-- HOC - Higher-order component là 1 kĩ thuật nâng cao trong ReactJs được sử dụng trong việc sử dụng
-lại các component
+- HOC - Higher-order component là 1 kĩ thuật nâng cao trong ReactJs được sử dụng trong việc chia sẻ logic giữa các comp
 - HOC là 1 hàm và nó nhận đối số là 1 component và trả về 1 component mới
-- HOC được sử dụng trong Redux hay React-DnD
+
+Ý nghĩa:
+HOC hữu ích trong việc chia sẽ chức năng như xác thực, lấy dữ liệu hoặc quản lí trạng thái mà không cần phải sửa đổi trực tiếp các comp
+Giúp code tái sử dụng, dễ bảo trì và giảm phức tạp khi làm việc với nhiều comp có cùng logic
+- HOC được sử dụng trong Redux hay React-dependencies
+
+-----VÍ DỤ MINH HOẠ ----
+
+# Tạo comp
+
+const UserProfile = ({ username, extraInfo }) => (
+  <div>
+    <h2>User Profile</h2>
+    <p>Username: {username}</p>
+    <p>Extra Info: {extraInfo}</p>
+  </div>
+);
+
+export default UserProfile;
+
+# Tạo HOC để kiểm tra người dùng đã đăng nhập chưa
+
+import React from 'react';
+
+const withAuthentication = (WrappedComponent) => {
+  return class extends React.Component {
+    render() {
+      const { isAuthenticated, ...otherProps } = this.props;
+
+      if (!isAuthenticated) {
+        return <p>Vui lòng đăng nhập để xem thông tin người dùng.</p>;
+      }
+
+      // Nếu đã đăng nhập, render WrappedComponent với các prop còn lại
+      return <WrappedComponent {...otherProps} />;
+    }
+  };
+};
+
+export default withAuthentication;
+
+#  Sử dụng HOC để tạo component mới
+
+import React from 'react';
+import UserProfile from './UserProfile';
+import withAuthentication from './withAuthentication';
+
+const UserProfileWithAuth = withAuthentication(UserProfile);
+
+function App() {
+  return (
+    <div>
+      {/* Khi không có xác thực */}
+      <UserProfileWithAuth isAuthenticated={false} username="John Doe" />
+
+      {/* Khi có xác thực */}
+      <UserProfileWithAuth isAuthenticated={true} username="Jane Doe" />
+    </div>
+  );
+}
+
+export default App;
+
+
+6. Render props là gì,
+Render props là 1 kỹ thuật trong ReactJs, trong đó 1 component nhận 1 props là 1 function và sử dụng nó 
+để render nội dung đông, thay vì chỉ nhận data và render, component có thể linh hoạt quyết định cách render dựa trên logic
+mà hàm được truyền vào
+
+Ý nghĩa của render props
+Với render props bạn có thể dễ dàng chia sẻ logic giữa các component mà không cần sử dụng HOC hay sử dụng nhiều comp lồng nhau
+Điều này sẽ giúp code dễ quản lí và tái sử dụng tốt hơn
+
+- Tạo Component MouseTracker sử dụng render props
+function MouseTracker(props) {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  // Hàm xử lý di chuyển chuột
+  const handleMouseMove = (event) => {
+    setPosition({
+      x: event.clientX,
+      y: event.clientY,
+    });
+  };
+
+  return (
+    <div style={{ height: '300px', border: '1px solid black' }} onMouseMove={handleMouseMove}>
+      {/* Gọi hàm render từ props để render nội dung */}
+      {props.render(position)}
+    </div>
+  );
+}
+
+- Sử dụng Component MouseTracker với Render props
+function App() {
+  return (
+    <div>
+      <h1>Mouse Tracker Example</h1>
+      <MouseTracker
+        render={(position) => (
+          <h3>Mouse position: ({position.x}, {position.y})</h3>
+        )}
+      />
+    </div>
+  );
+}
+
+
 
 6. Custom hook ? 
 - Custom hook là những hooks mà mình tự định nghĩa với mục đích thực hiện chức năng nào đó,
@@ -71,3 +177,4 @@ Cuối cùng nó sẽ cập nhật những node đó trên DOM thật.
 
 10. có nên set state trong componentDidUpdate không ?
 không nên set, vì có thể dẫn đến trường hợp component bị render liên tục
+

@@ -33,7 +33,7 @@ Hoặc có thể trình bày :
  Redux-Saga là một thư viện redux middleware,
  giúp quản lý những side effect trong ứng dụng redux trở nên đơn giản hơn. 
 Một số Kn cần nắm : Effect, Task, Blocking/Non Blocking
-+ Effect là 1 js obj chứa thông tin để saga middle biết phải làm việc gì
++ Effect là 1 JS obj chứa thông tin để saga middleware biết phải làm việc gì
 + Task được mô tả là 1 process chạy bên dưới background, có thể tạo các task chạy đồng thời song2 với nhau
 + Blocking/Non-blocking : blocking là phải đợi thực thi lệnh 1 xong mới thực thi lệnh 2
 
