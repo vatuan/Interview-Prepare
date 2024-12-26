@@ -1,16 +1,19 @@
 ---------------------------------------------- TYPESCRIPT--------------------------------------------------------
+# Table of Contents
+- [1. TS LÀ GÌ? TẠI SAO NÊN SỬ DỤNG TS](#1-ts-la-gi-tai-sao-nen-su-dung-ts)
+- [2. SỰ KHÁC NHAU GIỮA any VÀ unknown ? ](#su-khac-nhau-giua-any-va-unknown-)
+- [3. LÀM THẾ NÀO ĐỂ ĐỊNH NGHĨA CÁC THUỘC TÍNH TÙY CHỌN TRONG TS?](#lam-the-nao-de-dinh-nghia-cac-thuoc-tinh-tuy-chon-trong-ts)
+- [Contact](#contact)
 
-
-1. TS LÀ GÌ? TẠI SAO NÊN SỬ DỤNG TS
+## 1. TS LÀ GÌ? TẠI SAO NÊN SỬ DỤNG TS
 - TS là một dự án mã nguồn mở được phát triển bới Microsoft, nó có thể được coi là phiên bản
 nâng cao của JS
 - Lợi ích: Phát hiện lỗi sớm, dễ bảo trì và mở rộng dự án
 - Basic types: bao gồm 8 loại : boolean, number, string, array, enum, any, void, unknown
 - TS giúp ta biết được kiểu trả về của biến, func vd : let a:number = 100
 
------------------------------------------***----------------------------------------------------------------------------
 
-2. SỰ KHÁC NHAU GIỮA any VÀ unknown ? 
+## 2. SỰ KHÁC NHAU GIỮA any VÀ unknown ? 
 - any
     + Không kiểm tra kiểu: any có thể chứa bất kì giá trị nào, và TS không kiếm tra kiểu của giá trị này
     + Linh hoạt nhưng nguy hiểm: bạn có thể sử dụng giá trị any và không cần kiểm tra kiểu -> có thể dẫn đến lỗi runtime
@@ -21,9 +24,9 @@ Tóm lại
  any: Không giới hạn, bỏ qua kiểm tra kiểu, Dễ xảy ra lỗi không mong muốn
  unknown: An toàn hơn, yêu cầu kiểm tra kiểu trước khi sử dụng, Nên sử dụng nếu không rõ kiểu ban đầu
 
-----------------------------------------------***------------------------------------------------------------------
 
-3. LÀM THẾ NÀO ĐỂ ĐỊNH NGHĨA CÁC THUỘC TÍNH TÙY CHỌN TRONG TS?
+
+## 3. LÀM THẾ NÀO ĐỂ ĐỊNH NGHĨA CÁC THUỘC TÍNH TÙY CHỌN TRONG TS?
 - Sử dụng dấu ? sau tên thuộc tính
 - Nếu muốn tất cả thuộc tính của 1 interface hay 1 type thành tùy chọn thì dùng Partial (là 1 utility type)
 - Lưu ý:
@@ -34,7 +37,7 @@ Tóm lại
 
 -----------------------------------------------***------------------------------------------------------------------
 
-4. SỰ KHÁC BIỆT GIỮA TYPE VÀ INTERFACE LÀ GÌ ? 
+## 4. SỰ KHÁC BIỆT GIỮA TYPE VÀ INTERFACE LÀ GÌ ? 
 - Trong TS, cá type và interface đều được sử dụng để định nghĩa kiểu dữ liệu, nhưng chúng có 1 số điểm khác biệt 
 về cách sử dụng và khả năng mở rộng
 * Điểm chung
@@ -81,16 +84,15 @@ về cách sử dụng và khả năng mở rộng
     + Mô tả union types, tuple, hoặc những kiểu phức tạp không chỉ là object
     + Không cần khả năng mở rộng (extend) hoặc bổ sung thêm thuộc tính
 
-----------------------------------------------------***------------------------------------------------------------------
 
-5.  Generics TRONG TS LÀ GÌ?
+## 5.  Generics TRONG TS LÀ GÌ?
 - Là 1 tính năng mạnh mẽ trong TS giúp định nghĩa các kiểu dữ liệu linh hoạt, tái sử dụng và an toàn vè mặt kiểu
 - Cho phép viết code mà kiểu dữ liệu có thể được định nghĩa khi sử dụng thay vì cố định tại thời điểm định nghĩa
 - Hữu ích trong các trường hợp làm việc với danh sách, cấu trúc dữ liệu, hoặc APIs.
 
 ----------------------------------------------------***----------------------------------------------------------------
 
-6. MỘT SỐ UTILITY HAY DÙNG ? 
+## 6. MỘT SỐ UTILITY HAY DÙNG ? 
 - 
 1. abstract class: 
 - không thể tạo thể hiện với 1 abstract class mà phải tạo 1 class khác extend lại 
