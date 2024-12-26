@@ -2,7 +2,7 @@
 - [1. TS là gì? tại sao nên dùng TS](#1-ts-là-gì-tại-sao-nên-sử-dụng-ts)
 - [2. Sự khác nhau giữa **any** và **unknown**?](#2-sự-khác-nhau-giữa-any-và-unknown-)
 - [3. Làm thế nào để định nghĩa các thuộc tính tùy chọn trong TS?](#3-làm-thế-nào-để-định-nghĩa-các-thuộc-tính-tùy-chọn-trong-ts)
-- [4. Sự khác biệt giữa **type** và **interface** là gì? ](#4-sự-khác-biệt-giữa-type-và-interface-là-gì-)
+- [4. Sự khác biệt giữa **type** và **interface** là gì? ](#4-sự-khác-biệt-giữa-type-và-interface-là-gì)
 - [5. Generics trong TS là gì?](#5--generics-trong-ts-là-gì)
 
 ## 1. TS là gì? tại sao nên dùng TS
