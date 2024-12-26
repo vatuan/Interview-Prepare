@@ -1,9 +1,8 @@
----------------------------------------------- TYPESCRIPT--------------------------------------------------------
-# Table of Contents
-- [1. TS LÀ GÌ? TẠI SAO NÊN SỬ DỤNG TS](#1-ts-la-gi-tai-sao-nen-su-dung-ts)
-- [2. SỰ KHÁC NHAU GIỮA any VÀ unknown ? ](#su-khac-nhau-giua-any-va-unknown-)
-- [3. LÀM THẾ NÀO ĐỂ ĐỊNH NGHĨA CÁC THUỘC TÍNH TÙY CHỌN TRONG TS?](#lam-the-nao-de-dinh-nghia-cac-thuoc-tinh-tuy-chon-trong-ts)
-- [Contact](#contact)
+# TYPESCRIPT
+- [1. TS LÀ GÌ? TẠI SAO NÊN SỬ DỤNG TS](#1-ts-là-gì-tại-sao-nên-sử-dụng-ts)
+- [2. SỰ KHÁC NHAU GIỮA any VÀ unknown ? ](#2-sự-khác-nhau-giữa-any-và-unknown-)
+- [3. LÀM THẾ NÀO ĐỂ ĐỊNH NGHĨA CÁC THUỘC TÍNH TÙY CHỌN TRONG TS?](#3-làm-thế-nào-để-định-nghĩa-các-thuộc-tính-tùy-chọn-trong-ts)
+- [Contact](#4-sự-khác-biệt-giữa-type-và-interface-là-gì-)
 
 ## 1. TS LÀ GÌ? TẠI SAO NÊN SỬ DỤNG TS
 - TS là một dự án mã nguồn mở được phát triển bới Microsoft, nó có thể được coi là phiên bản
@@ -35,7 +34,7 @@ Tóm lại
     + Thuộc tính tùy chọn (?) khác với kiểu undefined. TS không tự động gán giá trị undefined cho thuộc tính tùy chọn
     + Khi sử dụng kế thừa (extends) hoặc mở rộng interface, các thuộc tính tùy chọn có thể bị ghi đè
 
------------------------------------------------***------------------------------------------------------------------
+
 
 ## 4. SỰ KHÁC BIỆT GIỮA TYPE VÀ INTERFACE LÀ GÌ ? 
 - Trong TS, cá type và interface đều được sử dụng để định nghĩa kiểu dữ liệu, nhưng chúng có 1 số điểm khác biệt 
@@ -90,10 +89,11 @@ về cách sử dụng và khả năng mở rộng
 - Cho phép viết code mà kiểu dữ liệu có thể được định nghĩa khi sử dụng thay vì cố định tại thời điểm định nghĩa
 - Hữu ích trong các trường hợp làm việc với danh sách, cấu trúc dữ liệu, hoặc APIs.
 
-----------------------------------------------------***----------------------------------------------------------------
 
 ## 6. MỘT SỐ UTILITY HAY DÙNG ? 
-- 
+
+## Contact
+
 1. abstract class: 
 - không thể tạo thể hiện với 1 abstract class mà phải tạo 1 class khác extend lại 
 abstract class (không thể tạo đối tượng bằng từ khóa new với abstract class)
