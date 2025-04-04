@@ -2,10 +2,10 @@
 
 ## Zustand
 
-- [1. Zustand là gì và cách hoạt động của nó?](#1-zustand-la-gi-va-cach-hoat-dong-cua-no)
-- [2. So sánh Zustand với các state management khác](#2-so-sanh-zustand-voi-cac-state-management-khac)
-- [3. Tối ưu performance khi sử dụng Zustand](#3-toi-uu-performance-khi-su-dung-zustand)
-- [4. Các middleware](#4-cac-middleware)
+- [1. Zustand là gì và cách hoạt động của nó?](#1-zustand-là-gì-và-cách-hoạt-động-của-nó)
+- [2. So sánh Zustand với các state management khác](#2-so-sánh-zustand-với-các-state-management-khác)
+- [3. Tối ưu performance khi sử dụng Zustand](#3-tối-ưu-performance-khi-sử-dụng-zustand)
+- [4. Các middleware](#4-các-middleware)
 
 ## 1. Zustand là gì và cách hoạt động của nó?
 
